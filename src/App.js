@@ -1,31 +1,29 @@
 import "./App.css";
-import axios from "axios";
-import { React, useState, useEffect } from "react";
+import { React } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Home from "./pages/home";
+import Header from "./components/header";
+import Characters from "./pages/characters";
+import Comic from "./pages/comics";
+import Character from "./pages/character";
+import Footer from "./components/footer";
 
 function App() {
-  const [data, setData] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await axios.get(
-        "https://marvel-scanner-backend.herokuapp.com/characters"
-      );
-      setData(response);
-      setIsLoading(false);
-      console.log(response.data[0].thumbnail.path);
-      console.log(response.data[0].name);
-    };
-    console.log();
-    fetchData();
-  }, []);
-
   return (
-    !isLoading && (
-      <div className="App">
-        <p>{data.data[0].name}</p>
-        <img src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg" />
-      </div>
-    )
+    <section className="App">
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/characters" element={<Characters />} />
+          <Route path="/character" element={<Character />} />
+
+          <Route path="/comics" element={<Comic />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </section>
   );
 }
 

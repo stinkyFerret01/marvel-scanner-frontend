@@ -1,0 +1,73 @@
+footer {
+    height: 20vh;
+    min-height: 6rem;
+    width: 100vw;
+    background-color: rgba(200, 200, 200, 0.2);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .siteFooter {
+    height: 50%;
+
+  }
+  #promo {
+    height: 50%;
+    line-height: 20px;
+    font-size: 11px;
+    text-align: center;
+  }
+  #promo-reacteur {
+    color: #5D48D2;
+    text-decoration: none;
+    font-weight: 900;
+    margin-left: 6px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 3px;
+  }
+  #promo-reacteur:hover {
+    text-decoration: underline;
+    cursor: alias;
+  }
+  #promo-reacteur img {
+    border-radius: 10%;
+    width: 16px;
+  }
+  #promo-perso {
+    color: #0C66C2;
+    text-decoration: none;
+    font-weight: 900;
+    margin-left: 6px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 3px;
+  }
+  #promo-perso:hover {
+    text-decoration: underline;
+    cursor: alias;
+  }
+  #promo-perso img {
+    width: 16px;
+    border-radius: 7%;
+  }
+  #promo-github {
+    color: darkorange;
+    text-decoration: none;
+    font-weight: 900;
+    margin-left: 6px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 3px;
+  }
+  #promo-github:hover {
+    text-decoration: underline;
+    cursor: alias;
+  }
+  #promo-github img {
+    width: 16px;
+    border-radius: 50%;
+  }
+  footer img {
+    position: relative;
+    top: 4px
+  }

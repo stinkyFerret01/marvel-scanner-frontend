@@ -1,0 +1,18 @@
+.header-component {
+    height: 6rem;
+    width: 100vw;
+    background-color: rgba(40, 40, 40, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-nav {
+   
+
+}
+
+.home-link {
+    color: white;
+}  
+
