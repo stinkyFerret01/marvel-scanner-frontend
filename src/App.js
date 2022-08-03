@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import axios from "axios";
+import { React, useState, useEffect } from "react";
 
 function App() {
+  const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get(
+        "https://marvel-scanner-backend.herokuapp.com/characters"
+      );
+      setData(response);
+      setIsLoading(false);
+      console.log(response.data[0].thumbnail.path);
+      console.log(response.data[0].name);
+    };
+    console.log();
+    fetchData();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    !isLoading && (
+      <div className="App">
+        <p>{data.data[0].name}</p>
+        <img src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg" />
+      </div>
+    )
   );
 }
 
