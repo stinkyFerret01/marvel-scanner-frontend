@@ -1,4 +1,59 @@
 .home-page {
-    width: 1024px;
-    background-color: blueviolet;
+    width: 100vw;
+    height: calc(100vh - 12rem);
+    background-image: url(/public/marvel-wallpaper.jpeg);
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    box-sizing: border-box;
+}
+.home-nav {
+    height: 12rem;
+    width: 48rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.display-comics {
+    height: 6rem;
+    width: 10rem;
+    background-size: cover;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: solid rgba(131, 1, 1, 0.8) 4px;
+    box-shadow: 0.4rem 0.4rem 0.4rem black;
+}
+.display-comics>img {
+    height: 5rem;
+    width: 8rem;
+   
+}
+
+.display-characters {
+    height: 6rem;
+    width: 10rem;
+    background-size: cover;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: solid rgba(131, 1, 1, 0.8) 4px;
+    box-shadow: 0.4rem 0.4rem 0.4rem black;
+}
+.display-characters>img {
+    height: 5rem;
+    width: 8rem;
+}
+
+.nav-text {
+    color: white;
 }

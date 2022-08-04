@@ -1,18 +1,17 @@
 .header-component {
     height: 6rem;
     width: 100vw;
-    background-color: rgba(40, 40, 40, 1);
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-.header-nav {
-   
-
+header nav {
+    height: 6rem;
+    overflow: hidden;
 }
-
-.home-link {
-    color: white;
-}  
-
+header img {
+    object-fit: cover;
+    position: relative;
+    top: -6rem;
+}

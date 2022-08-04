@@ -5,7 +5,7 @@ const Header = () => {
     <header className="header-component">
       <nav className="header-nav">
         <Link className="home-link" to="/">
-          <h3>link to HOME!!</h3>
+          <img src="./logo-marvel.png" />
         </Link>
       </nav>
     </header>

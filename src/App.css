@@ -1,10 +1,10 @@
 @import "CSS/reset.css";
+@import "CSS/home.css";
 @import "CSS/header.css";
 @import "CSS/character.css";
 @import "CSS/characters.css";
 @import "CSS/comic.css";
 @import "CSS/comics.css";
-@import "CSS/home.css";
 @import "CSS/footer.css";
 
 .App {
@@ -14,11 +14,7 @@
   justify-content: center;
   align-items: center;
 }
- .charactersList img {
-  height: 20rem;
-  width: 20rem;
-  object-fit: cover;
- }
+
  h1 {
   font-size: 3rem;
  }

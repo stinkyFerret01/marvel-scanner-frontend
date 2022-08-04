@@ -2,11 +2,12 @@ import "./App.css";
 import { React } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Home from "./pages/home";
 import Header from "./components/header";
-import Characters from "./pages/characters";
-import Comic from "./pages/comics";
+import Home from "./pages/home";
+import Comic from "./pages/comic";
+import Comics from "./pages/comics";
 import Character from "./pages/character";
+import Characters from "./pages/characters";
 import Footer from "./components/footer";
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
           <Route path="/characters" element={<Characters />} />
           <Route path="/character" element={<Character />} />
 
-          <Route path="/comics" element={<Comic />} />
+          <Route path="/comics" element={<Comics />} />
+          <Route path="/comic" element={<Comic />} />
         </Routes>
         <Footer />
       </Router>

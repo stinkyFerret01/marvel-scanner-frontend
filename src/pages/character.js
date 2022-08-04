@@ -14,20 +14,22 @@ const Character = () => {
       const response = await axios.get(
         `https://marvel-scanner-backend.herokuapp.com/character?id=${id}`
       );
-      await setChardata(response.data);
+      setChardata(response.data);
     };
     const fetchComicData = async () => {
       const response = await axios.get(
         `https://marvel-scanner-backend.herokuapp.com/charcomics?id=${id}`
       );
-      await setCharcomics(response.data);
+      setCharcomics(response.data);
       setIsLoading2(false);
     };
     fetchCharData();
     fetchComicData();
+    console.log("character");
   }, [id]);
   return (
-    !isLoading2 && (
+    !isLoading2 &&
+    { chardata } !== {} && { charcomics } && (
       <main>
         <section className="charactersList">
           <h2>{chardata.name}</h2>

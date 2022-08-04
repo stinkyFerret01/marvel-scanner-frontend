@@ -1,0 +1,27 @@
+.comics-page {
+    width: 100vw;
+    height: calc(100vh - 12rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.comics-card img {
+    height: 20rem;
+    width: 20rem;
+    object-fit: cover;
+    padding:1rem;   
+}
+.comics-card h2 {
+   color: white; 
+}
+.comics-carroussel-hold {
+    display: flex; 
+    width: 1058px;
+    overflow: hidden;
+    background-color: rgba(40, 40, 40, 1);
+}
+.comics-carroussel {
+    overflow-x: scroll;
+    display: flex;
+
+}
