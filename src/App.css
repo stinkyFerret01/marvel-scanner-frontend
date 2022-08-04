@@ -8,13 +8,16 @@
 @import "CSS/footer.css";
 
 .App {
+  font-family: sans-serif, Arial, Helvetica, ;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
- h1 {
+.loading {
+  height: calc(100vh - 12rem);
+}
+h1 {
   font-size: 3rem;
- }
+}

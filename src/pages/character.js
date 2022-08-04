@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useLocation } from "react-router-dom";
 import { React, useState, useEffect } from "react";
+import Loadingscreen from "../components/loading-screen";
+// import Test from "../pages/test";
 
 const Character = () => {
   const location = useLocation();
@@ -27,9 +29,8 @@ const Character = () => {
     fetchComicData();
     console.log("character");
   }, [id]);
-  return (
-    !isLoading2 &&
-    { chardata } !== {} && { charcomics } && (
+  return !isLoading2 && { chardata } !== {} ? (
+    { charcomics } && (
       <main>
         <section className="charactersList">
           <h2>{chardata.name}</h2>
@@ -43,6 +44,9 @@ const Character = () => {
         </section>
       </main>
     )
+  ) : (
+    <Loadingscreen />
+    // <Test />
   );
 };
 

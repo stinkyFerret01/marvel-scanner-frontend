@@ -2,11 +2,10 @@ footer {
     height: 20vh;
     height: 6rem;
     width: 100vw;
-    background-color: rgba(200, 200, 200, 0.2);
+    background-color: black;
     backdrop-filter: blur(5px);
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
   }
   .siteFooter {
@@ -14,10 +13,13 @@ footer {
 
   }
   #promo {
+    width: 24rem;
+    background-color: white;
     height: 50%;
     line-height: 20px;
     font-size: 11px;
     text-align: center;
+    border-radius: 1rem;
   }
   #promo-reacteur {
     color: #5D48D2;

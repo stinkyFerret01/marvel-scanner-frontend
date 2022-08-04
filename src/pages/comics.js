@@ -1,6 +1,7 @@
 import axios from "axios";
 import { React, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Loadingscreen from "../components/loading-screen";
 
 const Comics = () => {
   const [comicsData, setComicsData] = useState({});
@@ -17,31 +18,28 @@ const Comics = () => {
     };
     fetchComicsData();
   }, []);
-  return (
-    !isLoading3 &&
-    { comicsData } !== {} && (
-      <section className="comics-page">
-        <div className="comics-carroussel-hold">
-          <div className="comics-carroussel">
-            {comicsData.results.map((comic, index) => {
-              return (
-                <article key={index} className="comics-card">
-                  <Link to="/comic" state={{ comic: comic }}>
-                    <h2>{comic.title}</h2>
-                    <img
-                      src={
-                        comic.thumbnail.path + "." + comic.thumbnail.extension
-                      }
-                      alt={comic.title}
-                    />
-                  </Link>
-                </article>
-              );
-            })}
-          </div>
+  return !isLoading3 && { comicsData } !== {} ? (
+    <section className="comics-page">
+      <div className="comics-carroussel-hold">
+        <div className="comics-carroussel">
+          {comicsData.results.map((comic, index) => {
+            return (
+              <article key={index} className="comics-card">
+                <Link to="/comic" state={{ comic: comic }}>
+                  <img
+                    src={comic.thumbnail.path + "." + comic.thumbnail.extension}
+                    alt={comic.title}
+                  />
+                  <h2>{comic.title}</h2>
+                </Link>
+              </article>
+            );
+          })}
         </div>
-      </section>
-    )
+      </div>
+    </section>
+  ) : (
+    <Loadingscreen />
   );
 };
 

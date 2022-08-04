@@ -1,6 +1,9 @@
 .comics-page {
     width: 100vw;
     height: calc(100vh - 12rem);
+    background-image: url(/public/marvel-wallpaper-yellow.jpeg);
+    background-size: cover;
+   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,10 +21,15 @@
     display: flex; 
     width: 1058px;
     overflow: hidden;
-    background-color: rgba(40, 40, 40, 1);
+    background-color: rgba(40, 40, 40, 0.7);
+    border-radius: 1rem;
+    box-shadow: 0.4rem 0.4rem 0.4rem black;
+    backdrop-filter: blur(10px) opacity(1);
 }
 .comics-carroussel {
     overflow-x: scroll;
     display: flex;
-
+}
+.comics-carroussel::-webkit-scrollbar {
+    display: none;
 }
