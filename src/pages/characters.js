@@ -9,7 +9,7 @@ const Characters = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [searchCharInput, setSearchCharInput] = useState("");
   const [skip, setSkip] = useState(0);
-  const [limit, setLimit] = useState("100");
+  // const [limit, setLimit] = useState("100");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,7 +28,8 @@ const Characters = () => {
       setIsLoading(false);
     };
     fetchData();
-  }, [searchCharInput, skip, limit]);
+  }, [searchCharInput, skip]);
+
   return { charsData } !== {} && !isLoading ? (
     <main className="characters-page">
       <Searchform

@@ -6,13 +6,13 @@ const Home = () => {
       <nav className="home-nav">
         <Link to="/characters">
           <div className="display-characters">
-            <img src="./logo-marvel-heroes.jpeg" />
+            <img src="./logo-marvel-heroes.jpeg" alt="marvel wallpaper" />
           </div>
         </Link>
 
         <Link to="/comics">
           <div className="display-comics">
-            <img src="./logo-marvel-comics.png" />
+            <img src="./logo-marvel-comics.png" alt="marvel wallpaper" />
           </div>
         </Link>
       </nav>
