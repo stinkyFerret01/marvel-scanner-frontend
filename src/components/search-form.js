@@ -4,14 +4,16 @@ const Searchform = ({
   skip,
   setSkip,
   charsData,
+  limit,
 }) => {
   return (
     <article className="search-form">
       <button
+        className="page-skip"
         onClick={() => {
+          console.log({ skip }, { limit }, limit);
           skip >= 100 && setSkip(skip - 100);
         }}
-        className="page-skip"
       ></button>
       <input
         className="search-input"
@@ -23,10 +25,10 @@ const Searchform = ({
         }}
       />
       <button
-        onClick={() => {
-          skip < charsData.data.count - 100 && setSkip(skip + 100);
-        }}
         className="page-skip"
+        onClick={() => {
+          skip < charsData.data.count - skip && setSkip(skip + 100);
+        }}
       ></button>
     </article>
   );

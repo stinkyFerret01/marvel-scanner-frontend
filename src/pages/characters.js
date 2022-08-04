@@ -9,13 +9,14 @@ const Characters = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [searchCharInput, setSearchCharInput] = useState("");
   const [skip, setSkip] = useState(0);
+  const [limit, setLimit] = useState("100");
 
   useEffect(() => {
     const fetchData = async () => {
       // let response;
       // if (searchCharInput.length < 3) {
       const response = await axios.get(
-        `https://marvel-scanner-backend.herokuapp.com/characters?name=${searchCharInput}&skip=${skip}`
+        `https://marvel-scanner-backend.herokuapp.com/characters?name=${searchCharInput}&skip=${skip}&limit=${limit}`
       );
       // } else {
       //   response = await axios.get(
@@ -25,14 +26,11 @@ const Characters = () => {
 
       setCharsData(response);
       setIsLoading(false);
-      // console.log("characters");
-      // console.log("test", charsData);
     };
     fetchData();
-  }, [searchCharInput, skip]);
+  }, [searchCharInput, skip, limit]);
   return { charsData } !== {} && !isLoading ? (
     <main className="characters-page">
-      {console.log("test", charsData.data)}
       <Searchform
         charsData={charsData}
         searchCharInput={searchCharInput}
@@ -56,6 +54,33 @@ const Characters = () => {
             );
           })}
         </div>
+        {/* <div> */}
+        <p>
+          page {skip / 100 + 1}/{Math.ceil(charsData.data.count / 100)}
+        </p>
+
+        {/* <form
+            onSubmit={(event) => {
+              event.preventDefault();
+            }}
+          >
+            <label>
+              heroes per pages
+              <select
+                value={limit}
+                onChange={(event) => {
+                  setLimit(event.target.value);
+                }}
+              >
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select>
+            </label>
+            <input type="submit" value="Submit" />
+          </form>
+        </div> */}
       </div>
     </main>
   ) : (

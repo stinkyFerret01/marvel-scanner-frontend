@@ -55,8 +55,15 @@
     width: 10rem;
     border-radius: 5px;
 }
+
 .page-skip {
     width: 2rem;
     height: 2rem;
     border-radius: 5px;
+}
+.page-skip:hover {
+   cursor: pointer;
+}
+.perpage {
+    width: 2rem;
 }
