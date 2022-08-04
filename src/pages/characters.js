@@ -16,7 +16,7 @@ const Characters = () => {
       // let response;
       // if (searchCharInput.length < 3) {
       const response = await axios.get(
-        `https://marvel-scanner-backend.herokuapp.com/characters?name=${searchCharInput}&skip=${skip}&limit=${limit}`
+        `https://marvel-scanner-backend.herokuapp.com/characters?name=${searchCharInput}&skip=${skip}&limit=100`
       );
       // } else {
       //   response = await axios.get(
