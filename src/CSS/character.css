@@ -1,0 +1,21 @@
+.hero-display {
+    max-width: 884px;
+    width: calc(100vw - 2rem);
+    height: 26rem;
+    background-color: rgba(40, 40, 40, 0.7);
+    border-radius: 1rem;
+    box-shadow: 0.4rem 0.4rem 0.4rem black;
+    backdrop-filter: blur(10px) opacity(1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comic-list {
+    width: 20rem;
+}
+
+.character-card {
+    display: flex;
+    }
+    

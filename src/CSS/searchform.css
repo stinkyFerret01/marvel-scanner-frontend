@@ -1,0 +1,27 @@
+.search-form {
+    height: 2.6rem;
+    width: 16.4rem;
+    display: flex;
+    background-color: rgba(40, 40, 40, 0.7);
+    justify-content: space-around;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0.4rem 0.4rem 0.4rem black;
+}
+
+.search-input {
+    height: 1.6rem;
+    width: 10rem;
+    border-radius: 5px;
+}
+
+.page-skip {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 5px;
+}
+
+.page-skip:hover {
+   cursor: pointer;
+}

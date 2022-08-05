@@ -2,51 +2,61 @@ import axios from "axios";
 import { useLocation } from "react-router-dom";
 import { React, useState, useEffect } from "react";
 import Loadingscreen from "../components/loading-screen";
-// import Test from "../pages/test";
+
+////////////////
 
 const Character = () => {
+  ////
   const location = useLocation();
-  const { id } = location.state;
+  const { char } = location.state;
+  console.log(char.char.name);
 
-  const [chardata, setChardata] = useState({});
+  ////
   const [charcomics, setCharcomics] = useState({});
   const [isLoading2, setIsLoading2] = useState(true);
+
+  ////////////////
+
   useEffect(() => {
-    const fetchCharData = async () => {
-      const response = await axios.get(
-        `https://marvel-scanner-backend.herokuapp.com/character?id=${id}`
-      );
-      setChardata(response.data);
-    };
     const fetchComicData = async () => {
       const response = await axios.get(
-        `https://marvel-scanner-backend.herokuapp.com/charcomics?id=${id}`
+        `https://marvel-scanner-backend.herokuapp.com/charcomics?id=${char.char._id}`
       );
       setCharcomics(response.data);
       setIsLoading2(false);
     };
-    fetchCharData();
     fetchComicData();
     console.log("character");
-  }, [id]);
-  return !isLoading2 && { chardata } !== {} ? (
-    { charcomics } && (
-      <main>
-        <section className="charactersList">
-          <h2>{chardata.name}</h2>
+  }, [char.char._id]);
+
+  ////////////////
+
+  return !isLoading2 && { charcomics } !== {} ? (
+    <main className="characters-page">
+      <article className="character-card hero-display">
+        <div className="characters-card">
+          <h2>{char.char.name}</h2>
           <img
-            src={chardata.thumbnail.path + "." + chardata.thumbnail.extension}
-            alt={chardata.name}
+            src={char.char.thumbnail.path + "." + char.char.thumbnail.extension}
+            alt={char.char.name}
           />
-          {charcomics.comics.map((charComic, index) => {
-            return <article key={index}>{charComic.title}</article>;
-          })}
-        </section>
-      </main>
-    )
+        </div>
+        <div>
+          <h3>Apparitons</h3>
+          <div className="comic-list">
+            {charcomics.comics.map((charComic, index) => {
+              return (
+                <article key={index}>
+                  <p>{charComic.title}</p>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </article>
+    </main>
   ) : (
     <Loadingscreen />
-    // <Test />
   );
 };
 

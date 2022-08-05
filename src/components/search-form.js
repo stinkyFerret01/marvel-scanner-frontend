@@ -11,7 +11,6 @@ const Searchform = ({
       <button
         className="page-skip"
         onClick={() => {
-          console.log({ skip }, { limit }, limit);
           skip >= 100 && setSkip(skip - 100);
         }}
       ></button>

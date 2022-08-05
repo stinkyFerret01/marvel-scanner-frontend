@@ -1,5 +1,5 @@
 .comics-page {
-    width: 100vw;
+    width: calc(100vw-2rem);
     height: calc(100vh - 12rem);
     background-image: url(/public/marvel-wallpaper-yellow.jpeg);
     background-size: cover;

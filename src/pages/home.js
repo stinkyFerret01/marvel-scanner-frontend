@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+////////////////
+
 const Home = () => {
   return (
     <main className="home-page">
@@ -19,4 +21,5 @@ const Home = () => {
     </main>
   );
 };
+
 export default Home;

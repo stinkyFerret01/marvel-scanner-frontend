@@ -5,6 +5,7 @@
 @import "CSS/characters.css";
 @import "CSS/comic.css";
 @import "CSS/comics.css";
+@import "CSS/searchform.css";
 @import "CSS/footer.css";
 
 .App {
@@ -20,4 +21,11 @@
 }
 h1 {
   font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+
+}
+h3 {
+  font-size: 1,5rem;
 }

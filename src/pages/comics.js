@@ -3,9 +3,14 @@ import { React, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Loadingscreen from "../components/loading-screen";
 
+////////////////
+
 const Comics = () => {
+  ////
   const [comicsData, setComicsData] = useState({});
   const [isLoading3, setIsLoading3] = useState(true);
+
+  ////////////////
 
   useEffect(() => {
     const fetchComicsData = async () => {
@@ -18,6 +23,9 @@ const Comics = () => {
     };
     fetchComicsData();
   }, []);
+
+  ////////////////
+
   return !isLoading3 && { comicsData } !== {} ? (
     <section className="comics-page">
       <div className="comics-carroussel-hold">
