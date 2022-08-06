@@ -1,0 +1,58 @@
+.comics-page {
+    width: 100vw;
+    height: calc(100vh - 12rem);
+    background-image: url(/public/marvel-wallpaper-yellow.jpeg);
+    background-size: cover;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comic-display {
+    max-width: 884px;
+    width: calc(100vw - 2rem);
+    border-radius: 1rem;
+    box-shadow: 0.4rem 0.4rem 0.4rem black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(40, 40, 40, 0.7);
+    border: solid #5071A0 4px;
+    backdrop-filter: blur(2px) opacity(1);
+}
+
+.comic-display h3, .comic-display h4 {
+    font-weight: bold;
+    color: #9d2929   ;
+}
+
+.story-line {
+    border-radius: 0.8rem;
+    background-color: black;
+    border: solid #9d2929 4px;
+    margin-right: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.story-line h3 {
+    margin: 0rem 0rem 1rem 1rem;
+}
+
+.story-line p {
+   
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+
+
+
+
+
+

@@ -42,7 +42,11 @@ const Characters = () => {
           {charsData.data.results.map((char, index) => {
             return (
               <article key={index} className="characters-card">
-                <Link to="/character" state={{ char: { char } }}>
+                <Link
+                  to="/character"
+                  state={{ char: { char } }}
+                  className="text-link"
+                >
                   <img
                     src={char.thumbnail.path + "." + char.thumbnail.extension}
                     alt={char.name}

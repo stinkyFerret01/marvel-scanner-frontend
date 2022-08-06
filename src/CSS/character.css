@@ -1,21 +1,102 @@
+.characters-page {
+    width: 100vw;
+    height: calc(100vh - 12rem);
+    background-image: url(/public/marvel-wallpaper-blue.jpeg);
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+} 
+
 .hero-display {
     max-width: 884px;
     width: calc(100vw - 2rem);
-    height: 26rem;
-    background-color: rgba(40, 40, 40, 0.7);
+    height: 25rem;
     border-radius: 1rem;
     box-shadow: 0.4rem 0.4rem 0.4rem black;
-    backdrop-filter: blur(10px) opacity(1);
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(40, 40, 40, 0.7);
+    border: solid #5071A0 4px;
+    backdrop-filter: blur(2px) opacity(1);
+}
+
+.hero-display h4, h3 {
+    font-weight: bold;
+    color: goldenrod;
+}
+
+.description {
+    border-radius: 0.8rem;
+    background-color: black;
+    border: solid goldenrod 4px;
+    margin-right: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.description h3 {
+    margin: 0rem 0rem 1rem 1rem;
+}
+
+
+
+.description p {
+   
+    display: flex;
+    justify-content: flex-start;
+}
+
+.apparition {
+    margin-right: 1rem;
+    padding: 0.5rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: solid goldenrod 4px;
+
+    border-radius: 0.8rem;
+    background-color: black;
+    color: white;
+}
+
+.apparition h3 {
+    margin: 0rem 0rem 1rem 1rem;
 }
 
 .comic-list {
-    width: 20rem;
+
+    display: flex;
+    align-items: center;
+    width: 32rem;
+    overflow: hidden;
+    overflow-x: scroll;
 }
 
-.character-card {
-    display: flex;
-    }
-    
+.comic-list::-webkit-scrollbar {
+    display: none;
+}
+
+.comic-card {
+    margin: 0rem 0.2rem 0rem 0.2rem; 
+ 
+}
+
+.comic-list img {
+    width: 4rem;
+    object-fit: contain;
+}
+
+.comic-list img:hover  {
+   cursor: pointer;
+}
+
+.comic-list p {
+    display:  none;
+}

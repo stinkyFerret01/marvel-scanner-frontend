@@ -13,7 +13,6 @@ const Footer = () => {
           <img src="./logo-reacteur.jpeg" alt="logo du réacteur" />
           Réacteur
         </a>{" "}
-        (promo ORION-2022)
         <br />
         par{" "}
         <a

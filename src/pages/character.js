@@ -33,27 +33,43 @@ const Character = () => {
 
   return !isLoading2 && { charcomics } !== {} ? (
     <main className="characters-page">
-      <article className="character-card hero-display">
-        <div className="characters-card">
-          <h2>{char.char.name}</h2>
+      <section className="hero-display">
+        <article className="characters-card">
           <img
             src={char.char.thumbnail.path + "." + char.char.thumbnail.extension}
             alt={char.char.name}
           />
-        </div>
+          <h2>{char.char.name}</h2>
+        </article>
         <div>
-          <h3>Apparitons</h3>
-          <div className="comic-list">
-            {charcomics.comics.map((charComic, index) => {
-              return (
-                <article key={index}>
-                  <p>{charComic.title}</p>
-                </article>
-              );
-            })}
+          <div className="description">
+            <h3>DESCRIPTION</h3>
+            <h4>{char.char.description}</h4>
+          </div>
+          <div className="apparition">
+            <h3>APPARITION</h3>
+            <div className="comic-list">
+              {charcomics.comics.map((charComic, index) => {
+                return charcomics.comics.length > 0 ? (
+                  <article key={index} className="comic-card">
+                    <p>{charComic.title}</p>
+                    <img
+                      src={
+                        charComic.thumbnail.path +
+                        "." +
+                        char.char.thumbnail.extension
+                      }
+                      alt={char.char.name}
+                    />
+                  </article>
+                ) : (
+                  <p>INFORMATIONS NON RENSEIGNEES</p>
+                );
+              })}
+            </div>
           </div>
         </div>
-      </article>
+      </section>
     </main>
   ) : (
     <Loadingscreen />

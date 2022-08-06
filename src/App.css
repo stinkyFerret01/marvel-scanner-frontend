@@ -9,8 +9,7 @@
 @import "CSS/footer.css";
 
 .App {
-  font-family: sans-serif, Arial, Helvetica, ;
-  text-align: center;
+  font-family: sans serif, Arial, Helvetica ;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,13 +18,23 @@
 .loading {
   height: calc(100vh - 12rem);
 }
+.text-link {
+  color: inherit;
+  text-decoration: inherit;
+  font-family: inherit;
+}
 h1 {
   font-size: 3rem;
 }
 h2 {
   font-size: 2rem;
-
 }
 h3 {
   font-size: 1,5rem;
+}
+h4 {
+  font-size: 1rem;
+}
+p {
+  font-size: 0.5rem;
 }

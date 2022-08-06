@@ -13,7 +13,9 @@ const Searchform = ({
         onClick={() => {
           skip >= 100 && setSkip(skip - 100);
         }}
-      ></button>
+      >
+        <h2>-</h2>
+      </button>
       <input
         className="search-input"
         type="text"
@@ -28,7 +30,9 @@ const Searchform = ({
         onClick={() => {
           skip < charsData.data.count - skip && setSkip(skip + 100);
         }}
-      ></button>
+      >
+        <h2>+</h2>
+      </button>
     </article>
   );
 };
