@@ -3,7 +3,7 @@
 the goal here is to display informations collected on the Marvel API so the user can 
 go through the caracters informations and the Marvel comics they were seen in
 
-#this project is deployed with Netlify
+# this project is deployed with Netlify
 https://marvel-scanner.netlify.app/
 
 ## Available Scripts
