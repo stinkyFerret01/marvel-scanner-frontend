@@ -7,4 +7,4 @@ go through the caracters informations and the Marvel comics they were seen in
 
 In the project directory, you can run:
 
-### `yarn start`
+## `yarn start`
